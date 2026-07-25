@@ -53,7 +53,7 @@ aboutModal.addEventListener("click", (e) => {
 });
 
 // Highlight modal quicknav pill based on which section is in view
-const modalBody = document.querySelector(".modal-body");
+const modalBody = document.querySelector(".modal-box");
 const modalSections = document.querySelectorAll(".modal-section");
 const modalNavLinks = document.querySelectorAll(".modal-quicknav a");
 
