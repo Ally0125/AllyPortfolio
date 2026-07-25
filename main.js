@@ -57,32 +57,27 @@ const modalBody = document.querySelector(".modal-box");
 const modalSections = document.querySelectorAll(".modal-section");
 const modalNavLinks = document.querySelectorAll(".modal-quicknav a");
 
-if (modalBody) {
-    modalBody.addEventListener("scroll", () => {
-        let current = "";
-        const scrollPos = modalBody.scrollTop + 120; // offset for sticky header
-
-        // Check if scrolled to (or near) the bottom of the modal
-        const isAtBottom = modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight - 10;
-
-        if (isAtBottom) {
-            // Force the last section to be active when scrolled to the bottom
-            current = modalSections[modalSections.length - 1].getAttribute("id");
-        } else {
-            modalSections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
+if (modalBody && modalSections.length) {
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    modalNavLinks.forEach((link) => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
                 }
             });
+        },
+        {
+            root: modalBody,
+            rootMargin: "-100px 0px -60% 0px",
+            threshold: 0
         }
+    );
 
-        modalNavLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-                link.classList.add("active");
-            }
-        });
-    });
+    modalSections.forEach((section) => sectionObserver.observe(section));
 }
