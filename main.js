@@ -57,27 +57,37 @@ const modalBody = document.querySelector(".modal-box");
 const modalSections = document.querySelectorAll(".modal-section");
 const modalNavLinks = document.querySelectorAll(".modal-quicknav a");
 
-if (modalBody && modalSections.length) {
-    const sectionObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute("id");
-                    modalNavLinks.forEach((link) => {
-                        link.classList.remove("active");
-                        if (link.getAttribute("href") === `#${id}`) {
-                            link.classList.add("active");
-                        }
-                    });
-                }
-            });
-        },
-        {
-            root: modalBody,
-            rootMargin: "-100px 0px -60% 0px",
-            threshold: 0
-        }
-    );
+function setActiveModalLink(id) {
+    modalNavLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+}
 
-    modalSections.forEach((section) => sectionObserver.observe(section));
+// Clicking a pill marks it active immediately, no need to wait for scroll
+modalNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        setActiveModalLink(link.getAttribute("href").slice(1));
+    });
+});
+
+if (modalBody && modalSections.length) {
+    modalBody.addEventListener("scroll", () => {
+        const atBottom = Math.ceil(modalBody.scrollTop + modalBody.clientHeight) >= modalBody.scrollHeight - 2;
+
+        if (atBottom) {
+            setActiveModalLink(modalSections[modalSections.length - 1].id);
+            return;
+        }
+
+        const triggerLine = modalBody.scrollTop + 110;
+        let current = modalSections[0].id;
+
+        modalSections.forEach((section) => {
+            if (section.offsetTop <= triggerLine) {
+                current = section.id;
+            }
+        });
+
+        setActiveModalLink(current);
+    });
 }
