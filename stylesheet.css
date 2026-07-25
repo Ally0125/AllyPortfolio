@@ -589,17 +589,38 @@ section {
     line-height: 1.8;
 }
 
-.layer i {
-    color: #C97B84;
+.layer-links {
+    display: flex;
+    gap: 12px;
     margin-top: 20px;
-    font-size: 20px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
+}
+
+.layer-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%
+    gap: 6px;
+    background: #FFF8F2;
+    color: #2F2A26;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.layer-btn i {
+    font-size: 16px;
+    color: #C97B84;
+}
+
+.layer-btn:hover {
+    background: #C97B84;
+    color: #FFF8F2;
+}
+
+.layer-btn:hover i {
+    color: #FFF8F2;
 }
 
 .row:hover img {
