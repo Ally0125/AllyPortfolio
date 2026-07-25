@@ -62,13 +62,21 @@ if (modalBody) {
         let current = "";
         const scrollPos = modalBody.scrollTop + 120; // offset for sticky header
 
-        modalSections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
-            }
-        });
+        // Check if scrolled to (or near) the bottom of the modal
+        const isAtBottom = modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight - 10;
+
+        if (isAtBottom) {
+            // Force the last section to be active when scrolled to the bottom
+            current = modalSections[modalSections.length - 1].getAttribute("id");
+        } else {
+            modalSections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+        }
 
         modalNavLinks.forEach((link) => {
             link.classList.remove("active");
