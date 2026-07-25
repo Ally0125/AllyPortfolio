@@ -801,37 +801,80 @@ section {
     max-height: 85vh;
     overflow-y: auto;
     border-radius: 20px;
-    padding: 50px;
+    padding: 0;
     position: relative;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
-.modal-box h2 {
-    font-size: 36px;
-    margin-bottom: 35px;
+.modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #FFF8F2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 40px;
+    border-bottom: 2px solid rgba(201, 123, 132, 0.2);
+    border-radius: 20px 20px 0 0;
 }
 
-.modal-box h2 span {
+.modal-header h2 {
+    font-size: 26px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.modal-header h2 span {
     color: #C97B84;
 }
 
+.modal-quicknav {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-quicknav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #C97B84;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1.5px solid #C97B84;
+    border-radius: 20px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.modal-quicknav a:hover {
+    background: #C97B84;
+    color: #FFF8F2;
+}
+
 .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 30px;
+    font-size: 26px;
     cursor: pointer;
     color: #2F2A26;
     transition: color 0.3s;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .modal-close:hover {
     color: #C97B84;
 }
 
+.modal-body {
+    padding: 30px 40px 40px;
+}
+
 .modal-section {
     margin-bottom: 40px;
-    scroll-margin-top: 70px;
+    scroll-margin-top: 100px;
 }
 
 .modal-section:last-child {
@@ -909,32 +952,4 @@ section {
 .modal-item p:not(.modal-meta) {
     font-size: 15px;
     line-height: 1.6;
-}
-
-.modal-quicknav {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 30px;
-    position: sticky;
-    top: -50px;
-    background: #FFF8F2;
-    padding: 10px 0;
-    z-index: 10;
-}
-
-.modal-quicknav a {
-    font-size: 13px;
-    font-weight: 600;
-    color: #C97B84;
-    text-decoration: none;
-    padding: 6px 14px;
-    border: 1.5px solid #C97B84;
-    border-radius: 20px;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.modal-quicknav a:hover {
-    background: #C97B84;
-    color: #FFF8F2;
 }
