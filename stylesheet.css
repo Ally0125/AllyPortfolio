@@ -855,6 +855,11 @@ section {
     color: #FFF8F2;
 }
 
+.modal-quicknav a.active {
+    background: #C97B84;
+    color: #FFF8F2;
+}
+
 .modal-close {
     font-size: 26px;
     cursor: pointer;
