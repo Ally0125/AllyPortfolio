@@ -591,8 +591,11 @@ section {
 
 .layer-links {
     display: flex;
+    flex-direction: row;
     gap: 12px;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .layer-btn {
