@@ -831,6 +831,7 @@ section {
 
 .modal-section {
     margin-bottom: 40px;
+    scroll-margin-top: 70px;
 }
 
 .modal-section:last-child {
@@ -908,4 +909,32 @@ section {
 .modal-item p:not(.modal-meta) {
     font-size: 15px;
     line-height: 1.6;
+}
+
+.modal-quicknav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: -50px;
+    background: #FFF8F2;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.modal-quicknav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #C97B84;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1.5px solid #C97B84;
+    border-radius: 20px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.modal-quicknav a:hover {
+    background: #C97B84;
+    color: #FFF8F2;
 }
