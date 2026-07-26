@@ -20,7 +20,7 @@ body {
     height: 90px;
     padding: 0 10%;
     background: #FFF8F2;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,7 +147,7 @@ body {
 .home-sci a:hover {
     background: #C97B84;
     color: #FFF8F2;
-    box-shadow: 0 0 20px rgba(201,123,132,0.5);
+    box-shadow: 0 0 20px rgba(201, 123, 132, 0.5);
 }
 
 .btn-box {
@@ -168,8 +168,8 @@ body {
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 10px rgba(201,123,132,0.4),
-    0 0 30px rgba(201,123,132,0.4);
+    box-shadow: 0 0 10px rgba(201, 123, 132, 0.4),
+        0 0 30px rgba(201, 123, 132, 0.4);
 }
 
 .about {
@@ -194,7 +194,7 @@ body {
     object-fit: cover;
     border-radius: 50%;
     border: 8px solid #C97B84;
-    box-shadow: 0 20px 45px rgba(201,123,132,0.35);
+    box-shadow: 0 20px 45px rgba(201, 123, 132, 0.35);
 }
 
 .about-text h2 {
@@ -273,13 +273,13 @@ body {
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
-    box-shadow: 0 10px 30px rgba(201,123,132,0.15);
+    box-shadow: 0 10px 30px rgba(201, 123, 132, 0.15);
 }
 
 .services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
-    color:#C97B84;
+    color: #C97B84;
 }
 
 .services-list div h2 {
@@ -309,6 +309,22 @@ section {
     width: 40px;
     object-fit: contain;
     margin-bottom: 8px;
+}
+
+.skills-row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    padding: 0 90px;
+    align-items: flex-start;
+}
+
+.skills-row-2 .professional-full {
+    flex: 1;
+    min-width: 320px;
+    width: auto;
+    padding: 20px;
 }
 
 /* Horizontal bars for Professional Skills */
@@ -350,22 +366,74 @@ section {
 }
 
 /* Radial circles for Languages (reusing your existing radial animation system) */
-.lang-path-1 { animation: animate-path1 1s 1s linear forwards; stroke: #C97B84; stroke-width: 10; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round; }
-.lang-path-2 { animation: animate-lang2 1s 1s linear forwards; stroke: #C97B84; stroke-width: 10; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round; }
-.lang-path-3 { animation: animate-path1 1s 1s linear forwards; stroke: #C97B84; stroke-width: 10; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round; }
-.lang-path-4 { animation: animate-lang4 1s 1s linear forwards; stroke: #C97B84; stroke-width: 10; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round; }
-.lang-path-5 { animation: animate-lang4 1s 1s linear forwards; stroke: #C97B84; stroke-width: 10; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round; }
+.lang-path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+    stroke: #C97B84;
+    stroke-width: 10;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+}
+
+.lang-path-2 {
+    animation: animate-lang2 1s 1s linear forwards;
+    stroke: #C97B84;
+    stroke-width: 10;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 50;
+    stroke-linecap: round;
+}
+
+.lang-path-3 {
+    animation: animate-path1 1s 1s linear forwards;
+    stroke: #C97B84;
+    stroke-width: 10;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 75;
+    stroke-linecap: round;
+}
+
+.lang-path-4 {
+    animation: animate-lang4 1s 1s linear forwards;
+    stroke: #C97B84;
+    stroke-width: 10;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 176;
+    stroke-linecap: round;
+}
+
+.lang-path-5 {
+    animation: animate-lang4 1s 1s linear forwards;
+    stroke: #C97B84;
+    stroke-width: 10;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 201;
+    stroke-linecap: round;
+}
 
 @keyframes animate-lang2 {
-    100% { stroke-dashoffset: 0; }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes animate-lang4 {
-    100% { stroke-dashoffset: 201; }
+    100% {
+        stroke-dashoffset: 201;
+    }
 }
 
 .languages-full {
     margin-top: 40px;
+}
+
+.languages-full .radial-bars .radial-bar {
+    width: 40%;
 }
 
 .professional-full {
@@ -787,7 +855,7 @@ section {
 .contact-card:hover {
     transform: translateY(-8px);
     background: #C97B84;
-    box-shadow: 0 10px 25px rgba(201,123,132,0.3);
+    box-shadow: 0 10px 25px rgba(201, 123, 132, 0.3);
 }
 
 .contact-card:hover i,
@@ -800,8 +868,8 @@ section {
     width: 100%;
     text-align: center;
     padding: 25px 0 60px;
-    background:#2F2A26;
-    color:#FFF8F2;
+    background: #2F2A26;
+    color: #FFF8F2;
     font-weight: 300;
     margin-top: 100px;
 }
@@ -894,7 +962,7 @@ section {
     border-radius: 20px;
     padding: 0;
     position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .modal-header {
