@@ -319,19 +319,15 @@ section {
 }
 
 .skills-row-2 .professional-full {
-    flex: 1.6;
+    flex: 1;
     min-width: 320px;
     width: auto;
     padding: 20px;
 }
 
-.skills-row-2 .languages-full {
-    flex: 1;
-}
-
 /* Horizontal bars for Professional Skills */
 .skill-bars {
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -444,6 +440,7 @@ section {
         stroke-dashoffset: 201;
     }
 }
+
 
 .languages-full .radial-bars .radial-bar {
     width: 40%;
