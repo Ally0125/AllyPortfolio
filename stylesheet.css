@@ -577,7 +577,7 @@ section {
 }
 
 .layer h5 {
-    color: #FFF8F2;
+    color: #2F2A26;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -602,7 +602,7 @@ section {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: #2F2A26;
+    background: #FFF8F2;
     color: #2F2A26;
     font-size: 13px;
     font-weight: 600;
