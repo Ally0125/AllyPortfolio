@@ -341,8 +341,9 @@ section {
 
 .skill-bar-label{
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items:center;
+    gap: 15px;
     margin-bottom:8px;
 }
 
@@ -359,11 +360,6 @@ section {
 
 .skill-left span{
     font-size:18px;
-    font-weight:600;
-}
-
-.skill-percent{
-    font-size:16px;
     font-weight:600;
 }
 
@@ -445,18 +441,8 @@ section {
     }
 }
 
-/* .languages-full {
-    margin-top: 40px;
-} */
-
 .languages-full .radial-bars .radial-bar {
     width: 40%;
-}
-
-.professional-full {
-    width: 100%;
-    margin-left: 0;
-    padding: 60px 90px 60px;
 }
 
 .skills-col .heading1 {
@@ -474,12 +460,6 @@ section {
 .skills-col {
     flex: 0 0 auto;
     max-width: 400px;
-}
-
-.professional-full {
-    width: 100%;
-    margin-left: 0;
-    padding: 20px 90px 60px;
 }
 
 .professional-full .radial-bars {
@@ -545,10 +525,21 @@ section {
     position: relative;
 }
 
-/* .radial-bar:last-child{
-    grid-column:1 / 3;
-    justify-self:center;
-} */
+.radial-bars .radial-bar:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.languages-full .radial-bars .radial-bar {
+    height: 140px;
+}
+
+.languages-full .radial-bars {
+    gap: 20px;
+}
+
+.container1 {
+    justify-content: center;
+}
 
 .radial-bars .radial-bar svg {
     position: absolute;
@@ -561,7 +552,6 @@ section {
 
 .radial-bars .radial-bar .progress-bar {
     stroke-width: 10;
-    /*stop-color: black;*/
     stroke: black;
     fill: transparent;
     stroke-dasharray: 502;

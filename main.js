@@ -73,7 +73,6 @@ modalNavLinks.forEach((link) => {
 if (modalBody && modalSections.length) {
     modalBody.addEventListener("scroll", () => {
         const atBottom = Math.ceil(modalBody.scrollTop + modalBody.clientHeight) >= modalBody.scrollHeight - 2;
-        console.log("scrollTop:", modalBody.scrollTop, "clientHeight:", modalBody.clientHeight, "scrollHeight:", modalBody.scrollHeight, "atBottom:", atBottom);
         if (atBottom) {
             setActiveModalLink(modalSections[modalSections.length - 1].id);
             return;
