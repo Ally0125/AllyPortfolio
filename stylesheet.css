@@ -313,20 +313,25 @@ section {
 
 .skills-row-2 {
     display: flex;
-    gap: 800px;
+    gap: 60px;
     align-items: stretch;
     justify-content: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
 }
 
 .skills-row-2 .professional-full {
     flex: 1;
     min-width: 320px;
-    width: auto;
+    max-width: 520px;
     padding: 20px;
 }
 
 .skills-row-2 .languages-full {
-    flex: 0 0 500px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    padding: 20px;
 }
 
 /* Professional Skills */
