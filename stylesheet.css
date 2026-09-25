@@ -7,6 +7,17 @@
     font-family: 'poppins', 'sans-serif';
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
 body {
     color: #2F2A26;
     background: #F5EDE4;
